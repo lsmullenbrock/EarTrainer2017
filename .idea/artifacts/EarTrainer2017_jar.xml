@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EarTrainer2017:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/EarTrainer2017_jar</output-path>
+    <root id="archive" name="EarTrainer2017.jar">
+      <element id="module-output" name="EarTrainer2017" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EarTrainer.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <BorderPane>
+            <left>
+                <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="generateNewExerciseButton" mnemonicParsing="false" onAction="#generateNewExerciseButtonClicked" prefWidth="140.0" text="New Exercise">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="playExerciseButton" mnemonicParsing="false" onAction="#playExerciseButtonClicked" prefWidth="140.0" text="Play Exercise">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="revealAnswerButton" mnemonicParsing="false" onAction="#revealAnswerButtonClicked" prefWidth="140.0" text="Reveal Answer">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="playMidCButton" mnemonicParsing="false" onAction="#playMidCButtonClicked" prefWidth="140.0" text="Play Middle C">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </opaqueInsets>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </VBox>
+            </left>
+            <right>
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Volume">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </Label>
+                        <Slider fx:id="volumeSlider" majorTickUnit="5.0" minorTickCount="1" orientation="VERTICAL" showTickMarks="true" snapToTicks="true" value="90.0" />
+                        <Label fx:id="volumeLabel" alignment="CENTER" contentDisplay="CENTER" text="" textAlignment="CENTER">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </VBox>
+            </right>
+            <bottom>
+                <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="120.0" prefWidth="121.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="554.0" minWidth="149.0" prefWidth="526.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="42.0" prefWidth="70.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Number of Voices" GridPane.rowIndex="1">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </Label>
+                        <Label alignment="CENTER" text="Exercise Length" GridPane.rowIndex="3">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </Label>
+                        <Label text="Tempo (in BPM)" GridPane.rowIndex="5">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </Label>
+                        <Slider fx:id="voicesSlider" blockIncrement="1" majorTickUnit="1" max="8" min="1" minorTickCount="0" prefWidth="517.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Slider fx:id="exerciseLengthSlider" blockIncrement="1.0" layoutX="158.0" layoutY="24.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Slider fx:id="tempoSlider" blockIncrement="1.0" layoutX="158.0" layoutY="54.0" majorTickUnit="20.0" max="300.0" min="20.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="60.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="voicesLabel" text="" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <graphic>
+                                <Label alignment="TOP_CENTER" text="Voices: " />
+                            </graphic></Label>
+                        <Label fx:id="exerciseLengthLabel" text="" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                            <graphic>
+                                <Label text="Length: " />
+                            </graphic></Label>
+                        <Label fx:id="tempoLabel" text="" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                            <graphic>
+                                <Label text="BPM: " />
+                            </graphic></Label>
+                        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Separator prefWidth="200.0" GridPane.rowIndex="2" />
+                        <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Separator prefWidth="200.0" GridPane.rowIndex="4" />
+                        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Separator prefWidth="200.0" GridPane.columnIndex="1" />
+                        <Separator prefWidth="200.0" />
+                        <Separator prefWidth="200.0" GridPane.columnIndex="2" />
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </GridPane>
+            </bottom>
+            <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </opaqueInsets>
+                    <children>
+                        <Canvas fx:id="canvas" height="400.0" width="800.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Canvas>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</GridPane>
