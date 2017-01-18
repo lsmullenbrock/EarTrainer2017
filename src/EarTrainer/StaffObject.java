@@ -8,7 +8,7 @@ package EarTrainer;
  */
 abstract class StaffObject extends ScoreObject {
     private int staffSlotNumber;    //Determines where on the Staff X-axis to place object (i.e., each one has a "slot"
-                                    //where it fits
+                                    //where it fits)
 
     public int getStaffSlotNumber() {
         return staffSlotNumber;
