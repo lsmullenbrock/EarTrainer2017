@@ -7,7 +7,6 @@ package EarTrainer;
  * (e.g., TempoObject, StaffMeasure) or things that cannot explicitly be "drawn" to a canvas
  * (i.e., an actual tempo change or possibly page breaks and staff indentation).
  */
-public interface Renderable
-{
+public interface Renderable {
     void render();
 }

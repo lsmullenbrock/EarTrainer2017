@@ -7,12 +7,10 @@ import javafx.scene.image.Image;
  * Will alter regular Note to correct number on
  * 12-tone clock.
  */
-public enum Alteration
-{
+public enum Alteration {
     FLAT(-1), NATURAL(0), SHARP(1);
 
-    Alteration(int alt)
-    {
+    Alteration(int alt) {
         this.alt = alt;
     }
 
@@ -22,23 +20,16 @@ public enum Alteration
     private static Image flatImg = new Image(ETConst.FLAT_IMAGE_LOC);
     private static Image naturalImg = new Image(ETConst.NATURAL_IMAGE_LOC);
 
-    public int getAlt()
-    {
+    public int getAlt() {
         return alt;
     }
 
-    public Image getImg()
-    {
-        if(this.equals(FLAT))
-        {
+    public Image getImg() {
+        if (this.equals(FLAT)) {
             return flatImg;
-        }
-        else if(this.equals(SHARP))
-        {
+        } else if (this.equals(SHARP)) {
             return sharpImg;
-        }
-        else
-        {
+        } else {
             return naturalImg;
         }
     }

@@ -15,26 +15,22 @@ import javafx.scene.image.Image;
  * as listed below next to the numbers of the clock.
  * Or use Google.
  */
-public enum Note
-{
+public enum Note {
     C(0), D(2), E(4), F(5), G(7), A(9), B(11);
 
     private int num;
 
     private static Image noteImg = new Image(ETConst.NOTE_IMAGE_LOC);
 
-    Note(int num)
-    {
+    Note(int num) {
         this.num = num;
     }
 
-    public int getNoteNum()
-    {
+    public int getNoteNum() {
         return num;
     }
 
-    public Image getNoteImg()
-    {
+    public Image getNoteImg() {
         return noteImg;
     }
 }
