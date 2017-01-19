@@ -142,7 +142,6 @@ public class Pitch extends StaffObject implements Renderable {
     }
 
     private void drawLedgerLines() {
-
         if (note.equals(Note.C) && octave == 4) {
             drawLedgerLineMiddleC();
         } else if (midiNum >= 80) {
