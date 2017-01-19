@@ -15,6 +15,7 @@ public class Main extends Application {
         primaryStage.setTitle("Ear Trainer 2017");
         primaryStage.setScene(new Scene(root));
         primaryStage.getIcons().add(new Image(ETResources.ICON_IMG_LOC));
+        primaryStage.setResizable(false);
 
         primaryStage.show();
     }
