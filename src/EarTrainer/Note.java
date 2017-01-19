@@ -20,7 +20,7 @@ public enum Note {
 
     private int num;
 
-    private static Image noteImg = new Image(ETConst.NOTE_IMAGE_LOC);
+    private static Image noteImg = new Image(ETResources.NOTE_IMAGE_LOC);
 
     Note(int num) {
         this.num = num;

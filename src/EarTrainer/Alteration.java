@@ -16,9 +16,9 @@ public enum Alteration {
 
     private int alt;
 
-    private static Image sharpImg = new Image(ETConst.SHARP_IMAGE_LOC);
-    private static Image flatImg = new Image(ETConst.FLAT_IMAGE_LOC);
-    private static Image naturalImg = new Image(ETConst.NATURAL_IMAGE_LOC);
+    private static Image sharpImg = new Image(ETResources.SHARP_IMAGE_LOC);
+    private static Image flatImg = new Image(ETResources.FLAT_IMAGE_LOC);
+    private static Image naturalImg = new Image(ETResources.NATURAL_IMAGE_LOC);
 
     public int getAlt() {
         return alt;

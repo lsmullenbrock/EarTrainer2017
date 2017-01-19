@@ -2,9 +2,9 @@ package EarTrainer;
 
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Synthesizer;
@@ -31,6 +31,9 @@ public class Controller implements Initializable {
     public Button playExerciseButton;
     public Button revealAnswerButton;
     public Button playMidCButton;
+
+    public MenuItem howToUseMenuItem;
+    public MenuItem aboutMenuItem;
 
     public Canvas canvas;
 
@@ -131,5 +134,27 @@ public class Controller implements Initializable {
             playMidCButton.disableProperty().setValue(false);
         };
         new Thread(disableDelay).start();
+    }
+
+    public void howToUseMenuItemClicked() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("How to Use");
+        alert.setHeaderText(null);
+        alert.setContentText(ETResources.HOW_TO_USE_TEXT);
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(ETResources.ICON_IMG_LOC));
+
+        alert.showAndWait();
+    }
+
+    public void aboutMenuItemClicked() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("About");
+        alert.setHeaderText(null);
+        alert.setContentText(ETResources.ABOUT_TEXT);
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(ETResources.ICON_IMG_LOC));
+
+        alert.showAndWait();
     }
 }

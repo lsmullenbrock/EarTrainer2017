@@ -8,8 +8,8 @@ import javafx.scene.image.Image;
 public enum Clef {
     TREBLE, BASS;
 
-    private Image trebleClefImg = new Image(ETConst.TREBLE_CLEF_IMG_LOC);
-    private Image bassClefImg = new Image(ETConst.BASS_CLEF_IMG_LOC);
+    private Image trebleClefImg = new Image(ETResources.TREBLE_CLEF_IMG_LOC);
+    private Image bassClefImg = new Image(ETResources.BASS_CLEF_IMG_LOC);
 
     public Image getClefImg() {
         if (this.equals(TREBLE)) {
