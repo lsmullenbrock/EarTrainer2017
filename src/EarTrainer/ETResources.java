@@ -19,7 +19,7 @@ public interface ETResources
     /*
      * Text
      */
-    String ABOUT_TEXT   =   "Created by Lee Mullenbrock. " +
+    String ABOUT_TEXT   =   "Created by Lee Mullenbrock. \n" +
                             "Check out the GitHub: " +
                             "https://github.com/lsmullenbrock/EarTrainer2017";
 
