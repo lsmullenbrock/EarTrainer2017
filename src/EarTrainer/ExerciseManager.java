@@ -36,7 +36,6 @@ public class ExerciseManager {
                 boolean uniqueNumFound = false;
                 while(!uniqueNumFound) {
                     nextMidiNum = genRandomMidiNumPerVoice(currentVoiceNum);
-
                     if(!score.getStaves().get(currentStaffNum).containsAtSlot(nextMidiNum, currentStaffSlot)) {
                         score.getStaves().get(currentStaffNum).addPitch(new Pitch(nextMidiNum, currentStaffSlot));
                         uniqueNumFound = true;
