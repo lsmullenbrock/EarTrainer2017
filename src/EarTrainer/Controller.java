@@ -68,13 +68,11 @@ public class Controller implements Initializable {
         score = new Score(canvas);
         score.reset();
 
-        try
-        {
+        try {
             Synthesizer synthesizer = getSynthesizer();
             synthesizer.open();
             exerciseManager = new ExerciseManager(score, synthesizer);
-        } catch (MidiUnavailableException e)
-        {
+        } catch (MidiUnavailableException e) {
             e.printStackTrace();
         }
     }
@@ -90,7 +88,7 @@ public class Controller implements Initializable {
      */
     public void playExerciseButtonClicked() {
 
-        if(     score.getStaves().isEmpty() ||
+        if (score.getStaves().isEmpty() ||
                 score.getStaves() == null ||
                 score.getStaves().get(0).getPitches().size() == 0) {
             return;
@@ -103,11 +101,9 @@ public class Controller implements Initializable {
             playExerciseButton.disableProperty().setValue(true);
             exerciseManager.playExercise((int) volumeSlider.getValue(), (int) tempoSlider.getValue());
 
-            try
-            {
+            try {
                 Thread.sleep(msDuration);
-            } catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             playExerciseButton.disableProperty().setValue(false);
@@ -124,11 +120,9 @@ public class Controller implements Initializable {
         Runnable disableDelay = () -> {
             playMidCButton.disableProperty().setValue(true);
             exerciseManager.playMiddleC((int) volumeSlider.getValue(), delayTime);
-            try
-            {
+            try {
                 Thread.sleep(delayTime);
-            } catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             playMidCButton.disableProperty().setValue(false);
