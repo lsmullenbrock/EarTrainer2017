@@ -8,7 +8,7 @@ Just unzip and click the EarTrainer2017.jar file. You must have Java installed t
 
 Note: Don't get rid of the images folder when you unzip the file. You won't be able to see anything!
 
-#How to use
+## How to use
 1. Select how many different voices total you want in your exercise with the "Number of Voices" (i.e., how many notes to play at the same time).
 2. Select how long you want the exercise to be using the "Exercise Length" slider at the bottom.
 3. Select tempo, or how fast, to play the exercise in BPM (Beats per minute).
